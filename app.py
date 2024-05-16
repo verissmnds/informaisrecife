@@ -2,9 +2,9 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-st.set_page_config(page_title="A Campanha Permanente do Prefeito João Campos: dados extraídos das suas publicações.", page_icon="📐", layout="wide")
+st.set_page_config(page_title="Análise das Mídias Informais de Recife", page_icon="📐", layout="wide")
 
-df = pd.read_excel('JoaoCampos.xlsx')
+df = pd.read_csv('Bruna.colab.csv', delimiter = ";")
 df['Total Interactions'] = df['Total Interactions'].apply(lambda x: x.replace(',', '')).astype(int)
 
 # Lista de temas
