@@ -31,7 +31,7 @@ choices = ['Política', 'Infraestrutura', 'Segurança', 'Denúncias']
 # Cria a variável TEMAS
 df['Temas'] = np.select(condicoes, choices, default='Outros')
 
-df2 = df[['Profile', 'Date', 'Message', 'Temas', 'Link']]
+df2 = df[['Profile', 'Date', 'Message', 'Number of Reactions, Comments & Shares', 'Temas', 'Link']]
 
 
 def main():
@@ -43,7 +43,7 @@ def main():
 
     st.header("As 10 publicações com mais engajamento")
     st.markdown("Elas estão organizadas em ordem decrescente, da maior para a menor")
-    st.dataframe(df2.sort_values(by='Total Interactions', ascending=False).head(10))
+    st.dataframe(df2.sort_values(by='Number of Reactions, Comments & Shares', ascending=False).head(10))
 
     st.header('Infraestrutura')
     st.markdown("Aqui estão as publicações relacionadas ao tema Infraestrutura")
