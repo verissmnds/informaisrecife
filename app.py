@@ -65,6 +65,17 @@ def main():
     st.markdown("Aqui estão as publicações unicamente da página @novadescobertaordinaria")
     st.dataframe(df2[df2['Profile'] == 'NOVA 10COBERTA ORDINÁRIA'])
 
+    st.header('Recife Ordinário')
+    st.markdown("Aqui estão as publicações unicamente da página @recifeordinario")
+    st.dataframe(df2[df2['Profile'] == 'Recife Ordinário'])
+
+    st.header('Brega Bregoso')
+    st.markdown("Aqui estão as publicações unicamente da página @bregabregoso")
+    st.dataframe(df2[df2['Profile'] == 'Brega Bregoso'])
+
+    st.header('Casa Amarela Notícias')
+    st.markdown("Aqui estão as publicações unicamente da página @casaamarelanoticias")
+    st.dataframe(df2[df2['Profile'] == 'Casa Amarela Notícias 🏡✍️'])
 
 if __name__ == '__main__':
     main()
